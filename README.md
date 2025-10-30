@@ -8,40 +8,21 @@ It’s a **precision reconnaissance instrument** built for operators who need **
 ## Core Use Cases (With Tactical Context)
 
 | Use Case | Scenario | How Neo Scanner Wins |
-|--------|----------|----------------------|
-| ### **1. Bug Bounty Recon** | You're in a live program. Target scope: `*.example.com`. Time: 2 hours. | **Lock on `api.example.com` → instant matrix shows `8080` open with `Node.js` + missing `HSTS`** → immediate RCE or SSRF vector identified. |
-| | | **Speed + clarity = faster payouts.** |
-
-| | | |
-| ### **2. Red Team Target Profiling** | Phase 1 of a 2-week engagement. Need to map **all web entry points** across 50+ subdomains. | Run Neo Scanner in **batch mode (future)** → export JSON → feed into Burp/Nuclei. |
-| | | **No noise. Only live HTTP/S services.** |
-
-| | | |
-| ### **3. CTF Web Challenges** | 30-minute web challenge. Need to find the **admin panel** or **debug endpoint**. | Scan `target.ctf` → `8443` open → `title: "Internal Dashboard"` → **direct path to flag**. |
-| | | **Sub-3-second scans = speedrunning edge.** |
-
-| | | |
-| ### **4. Penetration Test Scoping** | Client says: *"Just test the main site."* But you know better. | Scan `client.com` → discovers `dev.client.com:8080` running **WordPress 4.7** → **out-of-scope critical finding**. |
-| | | **Expands scope. Justifies budget.** |
-
-| | | |
-| ### **5. Security Training & Labs** | Teaching "Web Enumeration 101" to students or new analysts. | **DOS CRT GUI = instant immersion.** Students *feel* like hackers while learning real `nmap` + HTTP logic. |
-| | | **No setup. No browser. Pure terminal mindset.** |
-
-| | | |
-| ### **6. Live Incident Response Triage** | Alert: possible web shell on `server47.prod`. Need to confirm exposure. | Point Neo Scanner at IP → **port 80 open, title: "Uploader v2", server: Apache/2.2.3** → **confirmed legacy app, likely compromised**. |
-| | | **Fast triage = faster containment.** |
-
-| | | |
-| ### **7. Personal Lab & Homelab Mapping** | You run 15 services in Docker. Want a **live topology dashboard**. | Run Neo Scanner locally → **ASCII map updates in real time** → see `traefik:8080`, `grafana:3000`, `vault:8200` all at once. |
-| | | **Your network, in green phosphor.** |
+|----------|----------|----------------------|
+| **1. Bug Bounty Recon** | You're in a live program. Target scope: `*.example.com`. Time: 2 hours. | **Lock on `api.example.com` → instant matrix shows `8080` open with `Node.js` + missing `HSTS`** → immediate RCE or SSRF vector identified.<br>**Speed + clarity = faster payouts.** |
+| **2. Red Team Target Profiling** | Phase 1 of a 2-week engagement. Need to map **all web entry points** across 50+ subdomains. | Run Neo Scanner in **batch mode (future)** → export JSON → feed into Burp/Nuclei.<br>**No noise. Only live HTTP/S services.** |
+| **3. CTF Web Challenges** | 30-minute web challenge. Need to find the **admin panel** or **debug endpoint**. | Scan `target.ctf` → `8443` open → `title: "Internal Dashboard"` → **direct path to flag**.<br>**Sub-3-second scans = speedrunning edge.** |
+| **4. Penetration Test Scoping** | Client says: *"Just test the main site."* But you know better. | Scan `client.com` → discovers `dev.client.com:8080` running **WordPress 4.7** → **out-of-scope critical finding**.<br>**Expands scope. Justifies budget.** |
+| **5. Security Training & Labs** | Teaching "Web Enumeration 101" to students or new analysts. | **DOS CRT GUI = instant immersion.** Students *feel* like hackers while learning real `nmap` + HTTP logic.<br>**No setup. No browser. Pure terminal mindset.** |
+| **6. Live Incident Response Triage** | Alert: possible web shell on `server47.prod`. Need to confirm exposure. | Point Neo Scanner at IP → **port 80 open, title: "Uploader v2", server: Apache/2.2.3** → **confirmed legacy app, likely compromised**.<br>**Fast triage = faster containment.** |
+| **7. Personal Lab & Homelab Mapping** | You run 15 services in Docker. Want a **live topology dashboard**. | Run Neo Scanner locally → **ASCII map updates in real time** → see `traefik:8080`, `grafana:3000`, `vault:8200` all at once.<br>**Your network, in green phosphor.** |
 
 ---
 
 ## Why It Fits These Workflows
 
 | Requirement | Neo Scanner Solution |
-|-----------|---------------------|
+|-------------|----------------------|
 | **Speed** | 4-port scan + HTTP probe = **under 5 seconds** |
 | **Clarity** | **Matrix table + color logs** = no parsing raw output |
 | **Focus** | **Only web ports** = no 65k noise |
